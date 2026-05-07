@@ -3,169 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCI LE CHANOT | Site en construction</title>
+    <title>SCI LE CHANOT | Excellence Immobilière & Gestion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Playfair Display', serif;
-            background-color: #ffffff;
-            color: #2c3e50;
-            overflow-x: hidden;
-        }
-
-        .hero-section {
-            display: flex;
-            height: 100vh;
-            width: 100%;
-        }
-
-        /* الجزء الأيسر: الصور */
-        .image-side {
-            flex: 1;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            padding: 10px;
-            background-color: #f8f9fa;
-        }
-
-        .img-container {
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            border-radius: 5px;
-            filter: grayscale(30%);
-            transition: 0.5s;
-        }
-
-        .img-container:hover {
-            filter: grayscale(0%);
-        }
-
-        /* الجزء الأيمن: النص */
-        .text-side {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 5%;
-            background: #fff;
-        }
-
-        .brand-name {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-            border-left: 4px solid #d4af37; /* لون ذهبي عقاري */
-            padding-left: 20px;
-        }
-
-        .status-tag {
-            display: inline-block;
-            font-size: 0.8rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #d4af37;
-            margin-bottom: 2rem;
-            font-weight: bold;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            line-height: 1.4;
-            margin-bottom: 2rem;
-            font-weight: 300;
-            font-style: italic;
-        }
-
-        .description {
-            font-family: 'Arial', sans-serif;
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #7f8c8d;
-            margin-bottom: 3rem;
-        }
-
-        .contact-footer {
-            border-top: 1px solid #eee;
-            padding-top: 2rem;
-        }
-
-        .contact-row {
-            margin-bottom: 15px;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .contact-row strong {
-            display: block;
-            font-size: 0.7rem;
-            color: #bdc3c7;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-
-        .contact-row a {
-            color: #2c3e50;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: 0.3s;
-        }
-
-        .contact-row a:hover {
-            color: #d4af37;
-        }
-
-        /* للتوافق مع الموبايل */
-        @media (max-width: 900px) {
-            .hero-section { flex-direction: column; }
-            .image-side { height: 40vh; }
-            .text-side { height: 60vh; text-align: center; }
-            .brand-name { border-left: none; padding-left: 0; }
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #fdfdfd; }
+        .serif { font-family: 'Cormorant Garamond', serif; }
+        .img-overlay { transition: transform 0.7s ease; }
+        .img-overlay:hover { transform: scale(1.05); }
     </style>
-    <!-- استيراد خطوط فخمة -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="text-slate-900">
 
-    <div class="hero-section">
-        <!-- قسم الصور (2 صور) -->
-        <div class="image-side">
-            <div class="img-container" style="background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=1000');"></div>
-            <div class="img-container" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1000');"></div>
-        </div>
+    <header class="fixed w-full z-50 bg-white/95 border-b border-slate-100 py-4 px-8 flex justify-between items-center backdrop-blur-sm">
+        <div class="serif text-3xl font-bold tracking-tighter text-slate-800">SCI LE CHANOT</div>
+        <nav class="hidden lg:flex space-x-10 text-xs uppercase tracking-widest font-medium">
+            <a href="#propos" class="hover:text-amber-700">À Propos</a>
+            <a href="#expertise" class="hover:text-amber-700">Expertise</a>
+            <a href="#portfolio" class="hover:text-amber-700">Patrimoine</a>
+            <a href="#philosophie" class="hover:text-amber-700">Philosophie</a>
+            <a href="#contact" class="px-4 py-2 bg-slate-900 text-white hover:bg-amber-700 transition">Nous Contacter</a>
+        </nav>
+    </header>
 
-        <!-- قسم النص بالفرنسية -->
-        <div class="text-side">
-            <span class="status-tag">Lancement Prochain</span>
-            <h1 class="brand-name">SCI LE CHANOT</h1>
-            <h2>Nous construisons quelque chose d'exceptionnel.</h2>
-            <p class="description">
-                Notre nouveau portail immobilier est actuellement en cours de développement. 
-                Nous travaillons pour vous offrir une expérience digitale à la hauteur de vos projets.
-            </p>
-
-            <div class="contact-footer">
-                <div class="contact-row">
-                    <strong>E-mail</strong>
-                    <a href="mailto:sales@scilechanot.fr">sales@scilechanot.fr</a>
+    <section class="h-screen flex flex-col lg:flex-row pt-20">
+        <div class="lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center bg-slate-50">
+            <h1 class="serif text-5xl lg:text-7xl mb-8 leading-tight">L'architecture de votre <span class="italic text-amber-800">patrimoine</span>.</h1>
+            <p class="text-slate-500 text-lg leading-relaxed max-w-md">Basée à Le Gault-Soigny, SCI LE CHANOT redéfinit la gestion immobilière à travers une approche rigoureuse et une vision durable de l'investissement.</p>
+            <div class="mt-12 flex space-x-6">
+                <div class="border-l-2 border-amber-800 pl-4">
+                    <span class="block font-bold text-2xl">2026</span>
+                    <span class="text-xs uppercase text-slate-400">Innovation</span>
                 </div>
-                <div class="contact-row">
-                    <strong>Téléphone</strong>
-                    <a href="tel:+33758687077">+33 7 58 68 70 77</a>
-                </div>
-                <div class="contact-row" style="margin-top: 10px; font-size: 0.8rem; color: #bdc3c7;">
-                    12 RUE LECOMTE, 51210 LE GAULT-SOIGNY, FRANCE
+                <div class="border-l-2 border-amber-800 pl-4">
+                    <span class="block font-bold text-2xl">GRAND EST</span>
+                    <span class="text-xs uppercase text-slate-400">Localisation</span>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="lg:w-1/2 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1577493322601-3ae7845f510c?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover img-overlay" alt="Luxury Architecture">
+        </div>
+    </section>
+
+    <section id="propos" class="py-32 px-8 lg:px-48 text-center">
+        <h2 class="serif text-4xl mb-12">Notre Engagement Institutionnel</h2>
+        <div class="grid lg:grid-cols-2 gap-16 text-left">
+            <p class="text-slate-600 leading-loose">
+                La SCI LE CHANOT n'est pas seulement une entité immobilière ; c'est un engagement envers l'excellence structurelle et la valorisation des actifs. Nous intervenons dans l'acquisition, la gestion et la location de biens immobiliers de prestige et de complexes résidentiels. Notre mission est de pérenniser la valeur de chaque mètre carré sous notre tutelle.
+            </p>
+            <p class="text-slate-600 leading-loose">
+                En tant que bailleurs de biens immobiliers, nous mettons un point d'honneur à la transparence et à la satisfaction de nos partenaires. Chaque décision est guidée par une analyse de marché approfondie et une connaissance pointue du secteur du Grand Est, garantissant ainsi une stabilité exemplaire.
+            </p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="grid grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+        <div class="h-96 overflow-hidden rounded-sm">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover img-overlay" alt="Interior Design">
+        </div>
+        <div class="h-96 overflow-hidden rounded-sm">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover img-overlay" alt="Modern House">
+        </div>
+        <div class="h-96 overflow-hidden rounded-sm">
+            <img src="https://images.unsplash.com/photo-1600607687940-4ad7a002cf5c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover img-overlay" alt="Commercial Estate">
+        </div>
+        <div class="h-96 overflow-hidden rounded-sm">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover img-overlay" alt="Business Office">
+        </div>
+    </section>
+
+    <section id="expertise" class="py-32 bg-slate-900 text-white px-8 lg:px-24">
+        <div class="flex flex-col lg:flex-row justify-between items-start mb-20">
+            <h2 class="serif text-5xl mb-8 lg:mb-0">Domaines d'Expertise</h2>
+            <p class="lg:w-1/3 text-slate-400">Une offre intégrée couvrant l'ensemble du cycle de vie immobilier, de l'investissement initial à la gestion quotidienne.</p>
+        </div>
+        <div class="grid lg:grid-cols-3 gap-12">
+            <div class="border-b border-white/10 pb-12">
+                <h3 class="serif text-2xl mb-6">Gestion Locative</h3>
+                <p class="text-slate-400 text-sm">Optimisation des revenus fonciers et gestion rigoureuse des baux pour nos locataires résidentiels et commerciaux.</p>
+            </div>
+            <div class="border-b border-white/10 pb-12">
+                <h3 class="serif text-2xl mb-6">Investissement Stratégique</h3>
+                <p class="text-slate-400 text-sm">Identification d'opportunités à haut potentiel dans la région Grand Est pour le développement du patrimoine de la SCI.</p>
+            </div>
+            <div class="border-b border-white/10 pb-12">
+                <h3 class="serif text-2xl mb-6">Maintenance Active</h3>
+                <p class="text-slate-400 text-sm">Programmes de rénovation et d'entretien préventif pour garantir la durabilité et l'attractivité de nos infrastructures.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophie" class="py-32 px-8 flex justify-center">
+        <div class="max-w-4xl text-center">
+            <h2 class="serif text-4xl mb-8 italic">"Construire pour l'avenir, gérer pour l'éternité."</h2>
+            <p class="text-slate-500 leading-relaxed">
+                Notre philosophie repose sur trois piliers : l'intégrité dans nos relations d'affaires, l'innovation dans nos méthodes de gestion et la responsabilité environnementale dans nos projets de rénovation. Nous croyons que l'immobilier est le socle de toute économie dynamique.
+            </p>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-50 py-24 px-8 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-16">
+            <div>
+                <h4 class="serif text-2xl mb-8">SCI LE CHANOT</h4>
+                <p class="text-xs text-slate-400 uppercase tracking-widest leading-loose">
+                    12 RUE LECOMTE<br>
+                    51210 LE GAULT-SOIGNY<br>
+                    FRANCE
+                </p>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <h5 class="text-xs uppercase font-bold tracking-widest text-amber-800">Communication</h5>
+                <a href="mailto:sales@scilechanot.fr" class="text-xl hover:text-amber-800 transition">sales@scilechanot.fr</a>
+                <a href="tel:+33758687077" class="text-xl hover:text-amber-800 transition">+33 7 58 68 70 77</a>
+            </div>
+            <div class="bg-white p-8 border border-slate-100 shadow-sm">
+                <h5 class="text-xs uppercase font-bold tracking-widest mb-6">Politique de Confidentialité</h5>
+                <p class="text-[10px] text-slate-400 leading-relaxed">
+                    Nous protégeons vos données personnelles conformément aux lois françaises. Cette interface sert de portail d'information institutionnel pour les investisseurs et locataires potentiels.
+                </p>
+            </div>
+        </div>
+        <div class="mt-20 pt-8 border-t border-slate-200 text-center text-[10px] uppercase tracking-tighter text-slate-400">
+            &copy; 2026 SCI LE CHANOT. TOUS DROITS RÉSERVÉS.
+        </div>
+    </footer>
 
 </body>
 </html>
